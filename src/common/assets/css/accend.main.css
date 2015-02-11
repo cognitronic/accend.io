@@ -23,6 +23,7 @@ html, body{
 
 .movie-list-container{
     padding: 5px;
+    margin-bottom: 10px;
 }
 
 .movie-list-content{

@@ -10,7 +10,7 @@
 							</a>
 						</div>
 					</div>
-					<div class="col-md-8 pull-right">
+					<div class="col-md-9 pull-right">
 						<div class="pull-right movie-rated-container">
 							{{movie.rated}}
 						</div>
@@ -30,4 +30,15 @@
 			</div>
 		</div>
 	</div>
+	<script>
+		$( document ).ready(function() {
+			var heights = $(".movie-list-container").map(function() {
+						return $(this).height();
+					}).get(),
+
+					maxHeight = Math.max.apply(null, heights);
+
+			$(".movie-list-container").height(maxHeight);
+		});
+	</script>
 </section>
