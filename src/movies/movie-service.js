@@ -56,10 +56,10 @@
 
 		    // Same issue as above
 		    // This service returns a header of 'Access-Control-Allow-Origin'
-		    RestService.getData('https://api.themoviedb.org/3/movie/550?api_key=' + Constants.TMD_KEY + '&append_to_response=releases,trailers', null, null,_success, '', _error, config.showLoader);
+		    //RestService.getData('https://api.themoviedb.org/3/movie/550?api_key=' + Constants.TMD_KEY + '&append_to_response=releases,trailers', null, null,_success, '', _error, config.showLoader);
 
 		    // So does this one but myapifilms.com does not
-			RestService.getData('http://www.omdbapi.com/?i=tt0071562&plot=short&r=json', null, null,_success, '', _error, config.showLoader);
+			//RestService.getData('http://www.omdbapi.com/?i=tt0071562&plot=short&r=json', null, null,_success, '', _error, config.showLoader);
 
 			// This is just to change up the result a bit.  If you click on anything other than Interstellar, you'll get Pulp Fiction
 			// Both good movies by the way! :)
