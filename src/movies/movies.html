@@ -1,0 +1,32 @@
+<section id="movies">
+	<div class="content">
+		<div class="row-fluid">
+			<div class="col-md-4 col-sm-6 col-xs-12  movie-list-container" ng-repeat="movie in mc.movies | orderBy:'releaseDate':true">
+				<div class="col-md-12  movie-list-content">
+					<div class="col-md-3 movie-list-image-outer-container">
+						<div class="movie-list-image-container">
+							<a href="" ng-click="mc.movieDetails(movie)">
+								<img class="movie-list-image" ng-src="{{movie.urlPoster}}" alt="{{movie.title}}"/>
+							</a>
+						</div>
+					</div>
+					<div class="col-md-9">
+						<div class="pull-right movie-rated-container">
+							{{movie.rated}}
+						</div>
+						<h3>
+							<a href="" ng-click="mc.movieDetails(movie)">
+								{{movie.title}}
+							</a>
+							<small>({{movie.year}})</small>
+						</h3>
+
+						<p>
+							{{movie.simplePlot}}
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
