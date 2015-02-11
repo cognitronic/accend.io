@@ -9,6 +9,8 @@
 		mc.getMovies = getMovies;
 	    mc.movieDetails = movieDetails;
 	    init();
+
+	    //This will make a call to get movies every minute.  If a new top movie is available it will be listed without having to refresh the page manually.
 	    $interval(function(){
 		    mc.getMovies();
 	    }, 60000);
