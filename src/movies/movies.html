@@ -1,7 +1,7 @@
 <section id="movies">
 	<div class="content">
 		<div class="row-fluid">
-			<div class="col-md-4 col-sm-6 col-xs-12  movie-list-container" ng-repeat="movie in mc.movies | orderBy:'releaseDate':true">
+			<div class="col-md-4 col-sm-6 col-xs-12  movie-list-container" ram-fix-container ng-repeat="movie in mc.movies | orderBy:'releaseDate':true">
 				<div class="col-md-12  movie-list-content">
 					<div class="col-md-3 movie-list-image-outer-container">
 						<div class="movie-list-image-container">
@@ -10,16 +10,16 @@
 							</a>
 						</div>
 					</div>
-					<div class="col-md-9 pull-right">
+					<div class="col-md-9 pull-right" ram-fix-container id="content">
 						<div class="pull-right movie-rated-container">
 							{{movie.rated}}
 						</div>
-						<h3>
+						<h4>
 							<a href="" ng-click="mc.movieDetails(movie)">
 								{{movie.title}}
 							</a>
 							<small>({{movie.year}})</small>
-						</h3>
+						</h4>
 
 						<p>
 							{{movie.simplePlot}}
@@ -31,14 +31,28 @@
 		</div>
 	</div>
 	<script>
-		$( document ).ready(function() {
-			var heights = $(".movie-list-container").map(function() {
-						return $(this).height();
-					}).get(),
-
-					maxHeight = Math.max.apply(null, heights);
-
-			$(".movie-list-container").height(maxHeight);
-		});
+//		$( document ).ready(function() {
+//			function resizeContainers(containerId){
+//				var heights = $(containerId).map(function() {
+//							return $(this).height();
+//						}).get(),
+//
+//						maxHeight = Math.max.apply(null, heights);
+//
+//				$(containerId).height(maxHeight);
+//
+//			}
+//
+//
+//			resizeContainers(".movie-list-container");
+//			resizeContainers("#content");
+//			$(window).resize(function(){
+//				console.log('hello');
+//				setTimeout(function(){
+//					resizeContainers("#content");
+//					resizeContainers(".movie-list-container");
+//				}, 1000)
+//			});
+//		});
 	</script>
 </section>
