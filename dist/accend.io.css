@@ -37,13 +37,13 @@ html, body{
 }
 
 .movie-list-image-container{
-    height: 175px;
-    width: 150px;
+    height: 125px;
+    width: 100px;
 }
 
 .movie-list-image{
-    height: 175px;
-    width: 150px;
+    height: 125px;
+    width: 100px;
     box-shadow: #888888 3px 3px 3px;
 }
 
@@ -102,4 +102,8 @@ html, body{
 .movie-detail-image{
 
     box-shadow: #888888 3px 3px 3px;
+}
+
+.clearfix{
+    clear: both;
 }
